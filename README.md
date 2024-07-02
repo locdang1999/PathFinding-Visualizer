@@ -31,3 +31,4 @@ export default {
 
 - Pathfinding Algorithms: Dijkstra, A*, BFS, DFS
 - Maze algorithms: Recursive Division, Binary Tree
+- npm i tailwind-merge
