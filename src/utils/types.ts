@@ -7,7 +7,9 @@ export type TileType = {
     isWall: boolean;
     isPath: boolean;
     distance: number;
+    isTraversed: boolean;
     isStart: boolean;
     parent: TileType | null;
 };
 export type GridType = TileType[][];
+export type SpeedType = 2 | 1 | 0.5;
