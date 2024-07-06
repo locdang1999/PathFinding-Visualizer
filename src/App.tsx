@@ -1,10 +1,24 @@
+import { useRef } from "react"
+import Grid from "./components/Grid"
+import { PathFindingProvider } from "./context/PathFindingContext"
+import { SpeedProvider } from "./context/SpeedContext"
+import { TileProvider } from "./context/TileContext"
+import Nav from "./components/Nav"
 
 function App() {
+  const isVisualizationRunningRef = useRef(false);
 
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <PathFindingProvider>
+      <TileProvider>
+        <SpeedProvider>
+          <div className="h-screen w-screen flex flex-col">
+            <Nav />
+            <Grid isVisualizationRunningRef={isVisualizationRunningRef} />
+          </div>
+        </SpeedProvider>
+      </TileProvider>
+    </PathFindingProvider>
   )
 }
 
